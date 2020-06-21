@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XFArtStore.Views.DetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:fonts="clr-namespace:XFArtStore.Fonts"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".6*" />
+                <RowDefinition Height=".4*" />
+            </Grid.RowDefinitions>
+            <Image
+                Grid.Row="0"
+                Aspect="Fill"
+                Source="{Binding Painting.imageBackground}"
+                TranslationY="{OnPlatform Android='-14',
+                                          iOS='-4'}" />
+            <pancake:PancakeView
+                Grid.Row="0"
+                Margin="{OnPlatform Android='25,25,0,0',
+                                    iOS='30,50,0,0'}"
+                Padding="{OnPlatform Android='12,8',
+                                     iOS='15,10'}"
+                BackgroundColor="{StaticResource colorYellow}"
+                CornerRadius="6"
+                HasShadow="False"
+                HorizontalOptions="Start"
+                VerticalOptions="Start">
+                <Label
+                    FontFamily="FontFontello"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    Text="{x:Static fonts:FontIcons.ArrowLeft}"
+                    TextColor="{StaticResource colorBlue40}"
+                    VerticalOptions="Start" />
+                <pancake:PancakeView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding PopDetailPageCommand}" NumberOfTapsRequired="1" />
+                </pancake:PancakeView.GestureRecognizers>
+            </pancake:PancakeView>
+            <pancake:PancakeView
+                Grid.Row="1"
+                Margin="0,-45,0,0"
+                BackgroundColor="{StaticResource colorBlue40}"
+                CornerRadius="34,34,0,0"
+                HasShadow="False">
+                <Grid>
+                    <ScrollView VerticalScrollBarVisibility="Never">
+                        <Grid RowSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".4*" />
+                                <ColumnDefinition Width=".2*" />
+                                <ColumnDefinition Width=".4*" />
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                Grid.Row="0"
+                                Grid.ColumnSpan="2"
+                                Margin="{OnPlatform Android='40,30,0,0',
+                                                    iOS='40,40,0,0'}"
+                                FontFamily="FontBodoniBold"
+                                FontSize="{OnPlatform Android='22',
+                                                      iOS='26'}"
+                                Text="{Binding Painting.name}"
+                                TextColor="{StaticResource colorYellow}" />
+                            <pancake:PancakeView
+                                Grid.Row="0"
+                                Grid.Column="2"
+                                Margin="{OnPlatform Android='0,30,40,0',
+                                                    iOS='0,40,40,0'}"
+                                Padding="0"
+                                BackgroundColor="{StaticResource colorBlue58}"
+                                CornerRadius="6"
+                                HasShadow="False"
+                                HorizontalOptions="End">
+                                <Image
+                                    Margin="10,8"
+                                    Aspect="AspectFit"
+                                    Source="ic_favorite.png" />
+                            </pancake:PancakeView>
+                            <Label
+                                Grid.Row="1"
+                                Grid.ColumnSpan="3"
+                                Margin="40,2,0,0"
+                                FontFamily="FontGilroyMedium"
+                                FontSize="{OnPlatform Android='14',
+                                                      iOS='16'}"
+                                Text="{Binding Painting.color}" />
+                            <StackLayout
+                                Grid.Row="2"
+                                Grid.ColumnSpan="2"
+                                Margin="40,6,0,0"
+                                Orientation="Horizontal"
+                                Spacing="5">
+                                <Label
+                                    FontFamily="FontGilroyMedium"
+                                    FontSize="{OnPlatform Android='14',
+                                                          iOS='16'}"
+                                    Text="{Binding Painting.rating, StringFormat='{0:N1}'}"
+                                    VerticalOptions="Center" />
+                                <StackLayout BindableLayout.ItemsSource="{Binding Stars}" Orientation="Horizontal">
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate>
+                                            <Image
+                                                Aspect="AspectFit"
+                                                Source="star.png"
+                                                VerticalOptions="Center" />
+                                        </DataTemplate>
+                                    </BindableLayout.ItemTemplate>
+                                </StackLayout>
+                            </StackLayout>
+                            <Label
+                                Grid.Row="2"
+                                Grid.Column="2"
+                                Margin="0,0,40,0"
+                                FontFamily="FontGilroyMedium"
+                                FontSize="{OnPlatform Android='16',
+                                                      iOS='20'}"
+                                HorizontalOptions="End"
+                                Text="{Binding Painting.price, StringFormat='${0:G}'}"
+                                VerticalOptions="Center" />
+                            <Label
+                                Grid.Row="3"
+                                Grid.Column="0"
+                                Margin="40,20,0,0"
+                                FontFamily="FontGilroyMedium"
+                                FontSize="{OnPlatform Android='12',
+                                                      iOS='14'}"
+                                Text="Multiple colors"
+                                TextColor="{StaticResource colorGrayC3}" />
+                            <Label
+                                Grid.Row="3"
+                                Grid.Column="1"
+                                Margin="0,20,0,0"
+                                FontFamily="FontGilroyMedium"
+                                FontSize="{OnPlatform Android='12',
+                                                      iOS='14'}"
+                                Text="Style"
+                                TextColor="{StaticResource colorGrayC3}" />
+                            <Label
+                                Grid.Row="3"
+                                Grid.Column="2"
+                                Margin="0,20,0,0"
+                                FontFamily="FontGilroyMedium"
+                                FontSize="{OnPlatform Android='12',
+                                                      iOS='14'}"
+                                Text="Made in"
+                                TextColor="{StaticResource colorGrayC3}" />
+                            <Label
+                                Grid.Row="4"
+                                Grid.Column="0"
+                                Margin="40,2,0,0"
+                                FontFamily="FontGilroyMedium"
+                                FontSize="{OnPlatform Android='12',
+                                                      iOS='14'}"
+                                Text="{Binding Painting.color}"
+                                TextColor="{StaticResource colorYellow}" />
+                            <Label
+                                Grid.Row="4"
+                                Grid.Column="1"
+                                Margin="0,2,0,0"
+                                FontFamily="FontGilroyMedium"
+                                FontSize="{OnPlatform Android='12',
+                                                      iOS='14'}"
+                                Text="{Binding Painting.style}"
+                                TextColor="{StaticResource colorYellow}" />
+                            <Label
+                                Grid.Row="4"
+                                Grid.Column="2"
+                                Margin="0,2,0,0"
+                                FontFamily="FontGilroyMedium"
+                                FontSize="{OnPlatform Android='12',
+                                                      iOS='14'}"
+                                Text="{Binding Painting.madeIn}"
+                                TextColor="{StaticResource colorYellow}" />
+                            <Label
+                                Grid.Row="5"
+                                Grid.ColumnSpan="3"
+                                Margin="40,20,35,50">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span
+                                            FontFamily="FontGilroyLight"
+                                            FontSize="{OnPlatform Android='12',
+                                                                  iOS='15'}"
+                                            Text="{Binding Painting.description}"
+                                            TextColor="{StaticResource colorWhite}" />
+                                        <Span
+                                            FontFamily="FontGilroyLight"
+                                            FontSize="{OnPlatform Android='12',
+                                                                  iOS='15'}"
+                                            Text=" ...Read more"
+                                            TextColor="{StaticResource colorYellow}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Grid>
+                    </ScrollView>
+                    <pancake:PancakeView
+                        Padding="40,15,30,15"
+                        BackgroundColor="{StaticResource colorYellow}"
+                        CornerRadius="40,0,0,0"
+                        HasShadow="False"
+                        HorizontalOptions="End"
+                        VerticalOptions="End">
+                        <Label
+                            Margin="{OnPlatform Android='10,0,0,0',
+                                                iOS='0'}"
+                            FontFamily="FontGilroyMedium"
+                            FontSize="Small"
+                            HorizontalTextAlignment="Center"
+                            Text="Add to Cart"
+                            TextColor="{StaticResource colorBlue40}" />
+                    </pancake:PancakeView>
+                </Grid>
+            </pancake:PancakeView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

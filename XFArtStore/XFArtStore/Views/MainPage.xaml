@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XFArtStore.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid BackgroundColor="{StaticResource colorBlue40}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8.5*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <Image
+            Grid.Row="0"
+            Aspect="AspectFill"
+            Source="background.png" />
+        <StackLayout
+            Grid.Row="1"
+            Margin="30,20,30,0"
+            Spacing="5">
+            <Label
+                FontFamily="FontBodoniBold"
+                FontSize="28"
+                Text="Online Modern Art Here"
+                TextColor="{StaticResource colorYellow}" />
+            <Label
+                FontFamily="FontGilroyRegular"
+                FontSize="18"
+                Text="It is a long established fact that a&#10;reader will be distracted by the&#10;readable." />
+            <StackLayout Margin="0,10,0,0" Orientation="Horizontal">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="15" />
+                        <ColumnDefinition Width="15" />
+                        <ColumnDefinition Width="15" />
+                    </Grid.ColumnDefinitions>
+                    <BoxView
+                        Grid.Column="0"
+                        BackgroundColor="{StaticResource colorYellow}"
+                        CornerRadius="2"
+                        HeightRequest="4"
+                        HorizontalOptions="FillAndExpand" />
+                    <BoxView
+                        Grid.Column="1"
+                        BackgroundColor="{StaticResource colorGray}"
+                        CornerRadius="2"
+                        HeightRequest="4"
+                        HorizontalOptions="FillAndExpand" />
+                    <BoxView
+                        Grid.Column="2"
+                        BackgroundColor="{StaticResource colorGray}"
+                        CornerRadius="2"
+                        HeightRequest="4"
+                        HorizontalOptions="FillAndExpand" />
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

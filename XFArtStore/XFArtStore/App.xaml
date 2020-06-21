@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="XFArtStore.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Application.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="FontBodoniRegular" />
+            <Setter Property="TextColor" Value="White" />
+        </Style>
+        <Color x:Key="colorYellow">#FFCA06</Color>
+        <Color x:Key="colorBlue40">#40466E</Color>
+        <Color x:Key="colorBlue58">#585E85</Color>
+        <Color x:Key="colorGray">Gray</Color>
+        <Color x:Key="colorGrayC3">#989898</Color>
+        <Color x:Key="colorWhite">#FFFFFF</Color>
+    </Application.Resources>
+</Application>
