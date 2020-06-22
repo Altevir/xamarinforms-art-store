@@ -20,7 +20,7 @@ O que foi usado no desenvolvimento:
 ![artstore_ios2_mini](https://user-images.githubusercontent.com/11803107/85237381-c36c3300-b3fc-11ea-9161-73552ec70da4.jpg)
 
 ### GIF
-
+![ezgif com-resize](https://user-images.githubusercontent.com/11803107/85238723-5493d780-b406-11ea-99a4-d3b592d6ebdd.gif)
 
 ## Créditos
 ### Design
