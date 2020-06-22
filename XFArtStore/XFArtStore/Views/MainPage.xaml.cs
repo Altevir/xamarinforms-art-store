@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using Xamarin.Forms;
+using XFArtStore.ViewModels;
 
 namespace XFArtStore
 {
@@ -11,6 +12,7 @@ namespace XFArtStore
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = new MainPageViewModel(Navigation);
         }
     }
 }

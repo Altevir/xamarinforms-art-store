@@ -4,56 +4,76 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:fonts="clr-namespace:XFArtStore.Fonts"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    NavigationPage.HasNavigationBar="False"
     mc:Ignorable="d">
 
     <Grid BackgroundColor="{StaticResource colorBlue40}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="8.5*" />
-            <RowDefinition Height="2*" />
+            <RowDefinition Height=".85*" />
+            <RowDefinition Height=".2*" />
         </Grid.RowDefinitions>
         <Image
             Grid.Row="0"
-            Aspect="AspectFill"
+            Aspect="Fill"
             Source="background.png" />
         <StackLayout
             Grid.Row="1"
-            Margin="30,20,30,0"
+            Margin="30,15,30,0"
             Spacing="5">
             <Label
                 FontFamily="FontBodoniBold"
-                FontSize="28"
+                FontSize="{OnPlatform Android='19',
+                                      iOS='22'}"
                 Text="Online Modern Art Here"
                 TextColor="{StaticResource colorYellow}" />
             <Label
-                FontFamily="FontGilroyRegular"
-                FontSize="18"
+                FontFamily="FontGilroyMedium"
+                FontSize="{OnPlatform Android='12',
+                                      iOS='14'}"
                 Text="It is a long established fact that a&#10;reader will be distracted by the&#10;readable." />
-            <StackLayout Margin="0,10,0,0" Orientation="Horizontal">
-                <Grid>
+            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                <Grid HorizontalOptions="FillAndExpand">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="15" />
                         <ColumnDefinition Width="15" />
                         <ColumnDefinition Width="15" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <BoxView
                         Grid.Column="0"
                         BackgroundColor="{StaticResource colorYellow}"
                         CornerRadius="2"
                         HeightRequest="4"
-                        HorizontalOptions="FillAndExpand" />
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center" />
                     <BoxView
                         Grid.Column="1"
                         BackgroundColor="{StaticResource colorGray}"
                         CornerRadius="2"
                         HeightRequest="4"
-                        HorizontalOptions="FillAndExpand" />
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center" />
                     <BoxView
                         Grid.Column="2"
                         BackgroundColor="{StaticResource colorGray}"
                         CornerRadius="2"
                         HeightRequest="4"
-                        HorizontalOptions="FillAndExpand" />
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center" />
+                    <Label
+                        Grid.Column="3"
+                        FontFamily="FontFontello"
+                        FontSize="26"
+                        HorizontalOptions="EndAndExpand"
+                        Rotation="180"
+                        Text="{x:Static fonts:FontIcons.ArrowLeft}"
+                        TextColor="{StaticResource colorYellow}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding NavigateToHomePageCommand}" NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
                 </Grid>
             </StackLayout>
         </StackLayout>

@@ -10,7 +10,7 @@ namespace XFArtStore
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new HomePage());
+            MainPage = new NavigationPage(new MainPage());
 
             if (Device.RuntimePlatform == Device.iOS)
                 DependencyService.Get<IStatusBarStyle>().ChangeTextColor();
