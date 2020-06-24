@@ -10,24 +10,24 @@ O que foi usado no desenvolvimento:
 
 ## Screenshots
 ### Android
-![artstore_android3](https://user-images.githubusercontent.com/11803107/85238468-7f7d2c00-b404-11ea-8e5d-93f583ae2250.jpg)
-![artstore_android](https://user-images.githubusercontent.com/11803107/85237361-a5063780-b3fc-11ea-9a24-f8c083619915.jpg)
-![artstore_android2](https://user-images.githubusercontent.com/11803107/85237366-b0596300-b3fc-11ea-88f5-1d91c7059b8d.jpg)
+![kidzee_android](https://user-images.githubusercontent.com/11803107/85609157-2a236380-b62c-11ea-9985-95ae698880c2.jpg)
+![kidzee_android_mario](https://user-images.githubusercontent.com/11803107/85609185-33accb80-b62c-11ea-9686-d9089b783b28.jpg)
+![kidzee_android_angry_birds](https://user-images.githubusercontent.com/11803107/85609210-3b6c7000-b62c-11ea-8f0a-87362914d7d7.jpg)
 
 
 ### iOS
-![artstore_ios3_mini](https://user-images.githubusercontent.com/11803107/85238548-10540780-b405-11ea-87da-e03ce71a5f90.jpg)
-![artstore_ios_mini](https://user-images.githubusercontent.com/11803107/85237369-b94a3480-b3fc-11ea-9950-ce3923364f3e.jpg)
-![artstore_ios2_mini](https://user-images.githubusercontent.com/11803107/85237381-c36c3300-b3fc-11ea-9161-73552ec70da4.jpg)
+![kidzee_ios300](https://user-images.githubusercontent.com/11803107/85609258-48895f00-b62c-11ea-8e8d-6d80b86a9aa4.jpg)
+![kidzee_ios_mario](https://user-images.githubusercontent.com/11803107/85609313-517a3080-b62c-11ea-84cd-3ca14b530ef5.jpg)
+![kidzee_ios_angry_birds](https://user-images.githubusercontent.com/11803107/85609339-5939d500-b62c-11ea-826e-270cee487505.jpg)
 
 ### GIF
-![ezgif com-resize](https://user-images.githubusercontent.com/11803107/85238723-5493d780-b406-11ea-99a4-d3b592d6ebdd.gif)
+![ezgif com-resize](https://user-images.githubusercontent.com/11803107/85610036-0280cb00-b62d-11ea-8273-ef63f4be8e86.gif)
 
 ## Créditos
 ### Design
-### Faisal Hossain
-https://www.uplabs.com/posts/online-art-store
-![preview](https://user-images.githubusercontent.com/11803107/85237421-1fcf5280-b3fd-11ea-882d-3a616cfac9b5.png)
+### Lov Soin
+https://www.uplabs.com/posts/kidzee-zone-play-store-for-kids-2574a8e3-3087-44b5-a122-1d8ddb31c5b2
+![preview](https://user-images.githubusercontent.com/11803107/85609567-943c0880-b62c-11ea-9847-f3281955cf81.png)
 
 ### Licença
 MIT - Consulte o arquivo LICENSE.txt
